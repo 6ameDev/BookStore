@@ -155,6 +155,20 @@
                         price: 79.99
                     }
                 ]
+            },
+            {
+                id: '011',
+                name: 'Harry Potter',
+                author: 'J.K.Rowling',
+                price: 79.99,
+                orders: [
+                    {
+                        id: 010,
+                        name: 'Harry Potter',
+                        sold: 132,
+                        price: 79.99
+                    }
+                ]
             }
         ];
 
