@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="bookStore">
+<head lang="en">
+    <title>The BookStore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body ng-controller="booksController" ng-init="init()">
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <form class="navbar-form navbar-left" role="search">
+                    <strong>Filter by: Author</strong>
+                    <input class="form-control" type="text" placeholder="Your Keyword Here" ng-model="bookFilter.author"> {{ bookFilter.author }}
+                </form>
+                <table class="table table-striped">
+                    <tr>
+                        <div class="col-sm-2 col-xs-2"><td>Book Id</td></div>
+                        <div class="col-sm-4 col-xs-4"><td>Name</td></div>
+                        <div class="col-sm-4 col-xs-4"><td>Author</td></div>
+                        <div class="col-sm-2 col-xs-2"><td>Price</td></div>
+                    </tr>
+                    <tr ng-repeat="book in books | filter:bookFilter">
+                        <td>{{ book.id }}</td>
+                        <td>{{ book.name }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.price | currency }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script src="scripts/angular.js"></script>
+<script src="scripts/angular-route.js"></script>
+<script src="app/app.js"></script>
+<script src="app/services/booksService.js"></script>
+<script src="app/controllers/booksController.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
