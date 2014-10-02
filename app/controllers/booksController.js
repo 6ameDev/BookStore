@@ -1,12 +1,17 @@
 /**
  * Created by sumit on 2/10/14.
  */
-var booksController = function ($scope, booksService) {
-    $scope.books = [];
+(function() {
 
-    $scope.init = function() {
-        $scope.books = booksService.getBooks();
-    };
-};
+    angular.module('bookStore').controller('booksController', function ($scope, booksService) {
+            $scope.books = [];
 
-angular.module('bookStore').controller('booksController', booksController);
+            $scope.init = function() {
+                $scope.books = booksService.getBooks();
+            };
+
+            $scope.init();
+        }
+    );
+
+}());

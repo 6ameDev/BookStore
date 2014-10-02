@@ -9,31 +9,19 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 </head>
-<body ng-controller="booksController" ng-init="init()">
-    <div class="container">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <form class="navbar-form navbar-left" role="search">
-                    <strong>Filter by- Author</strong>
-                    <input class="form-control" type="text" placeholder="Your Keyword Here" ng-model="bookFilter.author"> {{ bookFilter.author }}
-                </form>
-                <table class="table table-striped">
-                    <tr>
-                        <div class="col-sm-2 col-xs-2"><td>Book Id</td></div>
-                        <div class="col-sm-4 col-xs-4"><td>Name</td></div>
-                        <div class="col-sm-4 col-xs-4"><td>Author</td></div>
-                        <div class="col-sm-2 col-xs-2"><td>Price</td></div>
-                    </tr>
-                    <tr ng-repeat="book in books | filter:bookFilter">
-                        <td>{{ book.id }}</td>
-                        <td>{{ book.name }}</td>
-                        <td>{{ book.author }}</td>
-                        <td>{{ book.price | currency }}</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <h1 class="nav navbar">Bookstore</h1>
+        </nav>
+    </header>
+    <div class="btn-group-vertical col-sm-2 col-xs-2">
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-home"></span> Home</button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-book"></span> Books</button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-font"></span> Authors</button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Orders</button>
     </div>
+    <div class="col-sm-10 col-xs-10" ng-view=""></div>
 
 <script src="scripts/angular.js"></script>
 <script src="scripts/angular-route.js"></script>
