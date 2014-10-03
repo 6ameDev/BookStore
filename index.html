@@ -16,10 +16,10 @@
         </nav>
     </header>
     <div class="btn-group-vertical col-sm-2 col-xs-2">
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-home"></span> Home</button>
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-book"></span> Books</button>
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-font"></span> Authors</button>
-        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-tasks"></span> Orders</button>
+        <button type="button" class="btn btn-default"><a href="#/"><span class="glyphicon glyphicon-home"></span></a></button>
+        <button type="button" class="btn btn-default"><a href="#/books"><span class="glyphicon glyphicon-book"></span></a></button>
+        <button type="button" class="btn btn-default"><a href="#/authors"><span class="glyphicon glyphicon-font"></span></a></button>
+        <button type="button" class="btn btn-default"><a href="#/orders"><span class="glyphicon glyphicon-tasks"></span></a></button>
     </div>
     <div class="col-sm-10 col-xs-10" ng-view=""></div>
 
@@ -28,6 +28,7 @@
 <script src="app/app.js"></script>
 <script src="app/services/booksService.js"></script>
 <script src="app/controllers/booksController.js"></script>
+    <script src="app/controllers/ordersController.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

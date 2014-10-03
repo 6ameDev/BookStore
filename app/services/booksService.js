@@ -174,6 +174,14 @@
             this.getBooks = function() {
                 return books;
             };
+
+            this.getOrders = function() {
+                var orders = [];
+                for(var i=0; i<books.length; i++) {
+                    orders.push(books[i].orders[0]);
+                }
+                return orders;
+            };
         }
     );
 

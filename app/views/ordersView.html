@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <form class="navbar-form navbar-left" role="search">
+                    <strong>Filter by- Author</strong>
+                    <input class="form-control" type="text" placeholder="Your Keyword Here" ng-model="bookFilter.author">
+                </form>
+                <table class="table table-striped">
+                    <tr>
+                        <div class="col-sm-2 col-xs-2"><td>Book Id</td></div>
+                        <div class="col-sm-4 col-xs-4"><td>Name</td></div>
+                        <div class="col-sm-2 col-xs-2"><td>Sold</td></div>
+                        <div class="col-sm-4 col-xs-4"><td>Revenue</td></div>
+                    </tr>
+                    <tr ng-repeat="order in orders | filter:bookFilter">
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.name }}</td>
+                        <td>{{ order.sold }}</td>
+                        <td>{{ order.price * order.sold | currency }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
