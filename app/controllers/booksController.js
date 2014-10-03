@@ -5,6 +5,7 @@
 
     angular.module('bookStore').controller('booksController', function ($scope, booksService) {
             $scope.books = [];
+            $scope.username = booksService.getUsername();
 
             $scope.init = function() {
                 $scope.books = booksService.getBooks();

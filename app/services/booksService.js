@@ -4,6 +4,8 @@
 (function() {
 
     angular.module('bookStore').service('booksService', function() {
+            var user='Hi! Your name?';
+
             var books = [
 
                 {
@@ -181,6 +183,14 @@
                     orders.push(books[i].orders[0]);
                 }
                 return orders;
+            };
+
+            this.getUsername = function() {
+                return user;
+            };
+
+            this.pushUsername = function(username) {
+                user = username;
             };
         }
     );

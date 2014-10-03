@@ -1,11 +1,12 @@
-<div class="row">
-    <div class="container-fluid">
-        <div class="col-sm-4 col-xs-4"></div>
-        <div class="col-sm-4 col-xs-4">
-            <input class="form-control" type="text" placeholder="Hi, your name?" ng-model="homeText">
-            <br />
-            {{ homeText }}
+<link rel="stylesheet" href="styles/home.css">
+<div class="homestyle">
+    <div id="main">
+        <div class="editor" ng-hide="hidden">
+            <input type="text" placeholder="Hi, your name?" ng-blur="hideEditor()" ng-enter="hideEditor()" ng-model="username">
         </div>
-        <div class="col-sm-4 col-xs-4"></div>
+        <br /><br />
+        <p ng-click="toggleEditor($event)">
+            <span class="glyphicon glyphicon-user"></span> {{ username }}
+        </p>
     </div>
 </div>
