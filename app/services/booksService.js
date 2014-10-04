@@ -16,9 +16,9 @@
 
             });
 
-            $http.get('app/data.json').success(function(data){
-                books = data;
-            });
+//            $http.get('app/data.json').success(function(data){
+//                books = data;
+//            });
 
             this.getBooks = function() {
                 return books;
