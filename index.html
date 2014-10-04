@@ -14,11 +14,11 @@
             <h1 class="nav navbar">Bookstore</h1>
         </nav>
     </header>
-    <div class="btn-group-vertical col-sm-2 col-xs-2">
-        <button type="button" class="btn btn-default"><a href="#/"><span class="glyphicon glyphicon-home"></span></a></button>
-        <button type="button" class="btn btn-default"><a href="#/books"><span class="glyphicon glyphicon-book"></span></a></button>
-        <button type="button" class="btn btn-default"><a href="#/authors"><span class="glyphicon glyphicon-font"></span></a></button>
-        <button type="button" class="btn btn-default"><a href="#/orders"><span class="glyphicon glyphicon-tasks"></span></a></button>
+    <div class="btn-group-vertical col-sm-2 col-xs-2" ng-controller="menuController">
+        <button type="button" class="btn btn-default" ng-click="addToLink('/home')"><span class="glyphicon glyphicon-home"></span></button>
+        <button type="button" class="btn btn-default" ng-click="addToLink('/books')"><span class="glyphicon glyphicon-book"></span></button>
+        <button type="button" class="btn btn-default" ng-click="addToLink('/authors')"><span class="glyphicon glyphicon-font"></span></button>
+        <button type="button" class="btn btn-default" ng-click="addToLink('/orders')"><span class="glyphicon glyphicon-tasks"></span></button>
     </div>
     <div class="col-sm-10 col-xs-10" ng-view=""></div>
 
@@ -27,6 +27,7 @@
 <script src="scripts/jquery-2.1.1.js"></script>
 <script src="app/app.js"></script>
 <script src="app/services/booksService.js"></script>
+<script src="app/controllers/menuController.js"></script>
 <script src="app/controllers/homeController.js"></script>
 <script src="app/controllers/booksController.js"></script>
 <script src="app/controllers/ordersController.js"></script>

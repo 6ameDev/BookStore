@@ -8,7 +8,7 @@
 
     app.config(function ($routeProvider) {
         $routeProvider
-            .when('/',
+            .when('/home',
             {
                 controller: 'homeController',
                 templateUrl: 'app/views/homeView.html'
@@ -28,7 +28,7 @@
                 controller: 'ordersController',
                 templateUrl: 'app/views/ordersView.html'
             })
-            .otherwise({ redirectTo: '/' });
+            .otherwise({ redirectTo: '/home' });
     });
 
     app.directive('ngEnter', function() {

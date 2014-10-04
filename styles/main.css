@@ -61,6 +61,14 @@
     cursor:default;
 }
 
+.para:hover{
+    font-size:24px;
+    font-weight:bold;
+    color:#6d8088;
+    height: 30px;
+    cursor:default;
+}
+
 #main{
     height:100%;
     position:relative;
