@@ -12,8 +12,7 @@
             booksService.pushUsername($scope.username);
         }
 
-        $scope.toggleEditor = function(e) {
-            e.stopPropagation();
+        $scope.toggleEditor = function() {
             $scope.hidden = !$scope.hidden;
 
             if(!$scope.hidden)

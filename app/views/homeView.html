@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="styles/home.css">
 <div class="homestyle">
     <div id="main">
         <div class="editor" ng-hide="hidden">
             <input type="text" placeholder="Hi, your name?" ng-blur="hideEditor()" ng-enter="hideEditor()" ng-model="username">
         </div>
         <br /><br />
-        <p ng-click="toggleEditor($event)">
+        <p class="para" ng-click="toggleEditor()">
             <span class="glyphicon glyphicon-user"></span> {{ username }}
         </p>
     </div>

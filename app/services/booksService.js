@@ -16,10 +16,6 @@
 
             });
 
-//            $http.get('app/data.json').success(function(data){
-//                books = data;
-//            });
-
             this.getBooks = function() {
                 return books;
             };
@@ -37,7 +33,8 @@
             };
 
             this.pushUsername = function(username) {
-                user = username;
+                if(username)
+                    user = username;
             };
         }
     );
