@@ -3,7 +3,7 @@
  */
 (function() {
     angular.module('bookStore').controller('menuController', function($scope, $location) {
-       $scope.addToLink = function(address) {
+       $scope.navigate = function(address) {
            $location.path(address);
        }
     });

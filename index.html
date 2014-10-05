@@ -15,10 +15,10 @@
         </nav>
     </header>
     <div class="btn-group-vertical col-sm-2 col-xs-2" ng-controller="menuController">
-        <button type="button" class="btn btn-default" ng-click="addToLink('/home')"><span class="glyphicon glyphicon-home"></span></button>
-        <button type="button" class="btn btn-default" ng-click="addToLink('/books')"><span class="glyphicon glyphicon-book"></span></button>
-        <button type="button" class="btn btn-default" ng-click="addToLink('/authors')"><span class="glyphicon glyphicon-font"></span></button>
-        <button type="button" class="btn btn-default" ng-click="addToLink('/orders')"><span class="glyphicon glyphicon-tasks"></span></button>
+        <button type="button" class="btn btn-default" ng-click="navigate('/home')"><span class="glyphicon glyphicon-home"></span></button>
+        <button type="button" class="btn btn-default" ng-click="navigate('/books')"><span class="glyphicon glyphicon-book"></span></button>
+        <button type="button" class="btn btn-default" ng-click="navigate('/authors')"><span class="glyphicon glyphicon-font"></span></button>
+        <button type="button" class="btn btn-default" ng-click="navigate('/orders')"><span class="glyphicon glyphicon-tasks"></span></button>
     </div>
     <div class="col-sm-10 col-xs-10" ng-view=""></div>
 
