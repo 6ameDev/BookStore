@@ -4,7 +4,7 @@
             <div class="row">
                 <form class="navbar-form" role="search">
                     <div class="input-group navbar-left">
-                        <h3 class="panel-title">Welcome <strong>{{ username }}</strong>!</h3>
+                        <h3 class="panel-title">Welcome <strong>{{ username | uppercase }}</strong>!</h3>
                     </div>
                     <div class="input-group navbar-right">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-book"></span></span>
@@ -13,19 +13,19 @@
                 </form>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-hover">
             <thead><tr>
-                <div class="col-xs-1 col-md-2"><td>Book Id</td></div>
-                <div class="col-xs-5 col-md-4"><td>Book</td></div>
-                <div class="col-xs-5 col-md-4"><td>Author</td></div>
-                <div class="col-xs-1 col-md-2"><td>Price</td></div>
+                <div class="col-xs-1 col-md-2"><td><strong>Id</strong></td></div>
+                <div class="col-xs-5 col-md-4"><td><strong>Book</strong></td></div>
+                <div class="col-xs-5 col-md-4"><td><strong>Author</strong></td></div>
+                <div class="col-xs-1 col-md-2"><td><strong>Price</strong></td></div>
             </tr></thead>
-            <tr ng-repeat="book in books | filter:bookFilter">
+            <tbody><tr ng-repeat="book in books | filter:bookFilter">
                 <td>{{ book.id }}</td>
                 <td>{{ book.name }}</td>
                 <td>{{ book.author }}</td>
                 <td>{{ book.price | currency }}</td>
-            </tr>
+            </tr></tbody>
         </table>
     </div>
 </div>

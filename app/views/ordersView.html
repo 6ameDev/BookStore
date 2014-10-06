@@ -4,7 +4,7 @@
             <div class="row">
                 <form class="navbar-form" role="search">
                     <div class="input-group navbar-left">
-                        <h3 class="panel-title">Welcome <strong>{{ username }}</strong>!</h3>
+                        <h3 class="panel-title">Welcome <strong>{{ username | uppercase }}</strong>!</h3>
                     </div>
                     <div class="input-group navbar-right">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-book"></span></span>
@@ -13,19 +13,19 @@
                 </form>
             </div>
         </div>
-        <table class="table table-striped">
+        <table class="table table-hover">
             <thead><tr>
-                <div class="col-md-2"><td>Book Id</td></div>
-                <div class="col-md-4"><td>Book</td></div>
-                <div class="col-md-2"><td>Sold</td></div>
-                <div class="col-md-4"><td>Revenue</td></div>
+                <div class="col-md-2"><td><strong>Id</strong></td></div>
+                <div class="col-md-4"><td><strong>Book</strong></td></div>
+                <div class="col-md-2"><td><strong>Sold</strong></td></div>
+                <div class="col-md-4"><td><strong>Revenue</strong></td></div>
             </tr></thead>
-            <tr ng-repeat="order in orders | filter:bookFilter">
+            <tbody><tr ng-repeat="order in orders | filter:bookFilter">
                 <td>{{ order.id }}</td>
                 <td>{{ order.name }}</td>
                 <td>{{ order.sold }}</td>
                 <td>{{ order.price * order.sold | currency }}</td>
-            </tr>
+            </tr></tbody>
         </table>
     </div>
 </div>
