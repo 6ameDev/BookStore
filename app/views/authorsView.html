@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <form class="navbar-form" role="search">
+                    <div class="input-group navbar-left">
+                        <h3 class="panel-title">Welcome <strong>{{ username }}</strong>!</h3>
+                    </div>
+                    <div class="input-group navbar-right">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-font"></span></span>
+                        <input class="form-control" type="text" placeholder="Search Keyword Here" ng-model="bookFilter.author">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead><tr>
+                <div class="col-md-2"><td>Book Id</td></div>
+                <div class="col-md-4"><td>Author</td></div>
+                <div class="col-md-4"><td>Book</td></div>
+                <div class="col-md-2"><td>Price</td></div>
+            </tr></thead>
+            <tr ng-repeat="book in books | filter:bookFilter">
+                <td>{{ book.id }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.name }}</td>
+                <td>{{ book.price | currency }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

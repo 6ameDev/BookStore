@@ -2,25 +2,32 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="row">
-                <form class="navbar-form navbar-left" role="search">
-                    Welcome <strong>{{ username }}</strong>!
-                    <input class="form-control" type="text" placeholder="Your Keyword Here" ng-model="bookFilter.name">
+                <form class="navbar-form" role="search">
+                    <div class="input-group navbar-left">
+                        <h3 class="panel-title">Welcome <strong>{{ username }}</strong>!</h3>
+                    </div>
+                    <div class="input-group navbar-right">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-book"></span></span>
+                        <input class="form-control" type="text" placeholder="Search Keyword Here" ng-model="bookFilter.name">
+                    </div>
                 </form>
-                <table class="table table-striped">
-                    <tr>
-                        <div class="col-sm-2 col-xs-2"><td>Book Id</td></div>
-                        <div class="col-sm-4 col-xs-4"><td>Name</td></div>
-                        <div class="col-sm-2 col-xs-2"><td>Sold</td></div>
-                        <div class="col-sm-4 col-xs-4"><td>Revenue</td></div>
-                    </tr>
-                    <tr ng-repeat="order in orders | filter:bookFilter">
-                        <td>{{ order.id }}</td>
-                        <td>{{ order.name }}</td>
-                        <td>{{ order.sold }}</td>
-                        <td>{{ order.price * order.sold | currency }}</td>
-                    </tr>
-                </table>
             </div>
         </div>
+        <table class="table table-striped">
+            <thead><tr>
+                <div class="col-md-2"><td>Book Id</td></div>
+                <div class="col-md-4"><td>Book</td></div>
+                <div class="col-md-2"><td>Sold</td></div>
+                <div class="col-md-4"><td>Revenue</td></div>
+            </tr></thead>
+            <tr ng-repeat="order in orders | filter:bookFilter">
+                <td>{{ order.id }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.sold }}</td>
+                <td>{{ order.price * order.sold | currency }}</td>
+            </tr>
+        </table>
     </div>
 </div>
+
+
