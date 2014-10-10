@@ -14,15 +14,35 @@
             <h1 class="navbar-text navbar-right">Bookstore</h1>
         </nav>
     </header>
-    <div class="row">
-    <div class="btn-group-vertical col-sm-2 col-xs-12" ng-controller="menuController">
-        <button type="button" class="btn btn-default" ng-click="navigate('/home')"><span class="glyphicon glyphicon-home"></span></button>
-        <button type="button" class="btn btn-default" ng-click="navigate('/books')"><span class="glyphicon glyphicon-book"></span></button>
-        <button type="button" class="btn btn-default" ng-click="navigate('/authors')"><span class="glyphicon glyphicon-font"></span></button>
-        <button type="button" class="btn btn-default" ng-click="navigate('/orders')"><span class="glyphicon glyphicon-tasks"></span></button>
-    </div>
+
+    <nav class="navbar navbar-default col-sm-2 col-xs-12" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="menuController">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="nav navbar-nav menucontainer">
+                        <li class="col-sm-12 menuwrapper"><button type="button" class="btn btn-default btn-block menubutton" ng-click="navigate('/home')"><span class="glyphicon glyphicon-home"></span></button></li>
+                        <li class="col-sm-12 menuwrapper"><button type="button" class="btn btn-default btn-block menubutton" ng-click="navigate('/books')"><span class="glyphicon glyphicon-book"></span></button></li>
+                        <li class="col-sm-12 menuwrapper"><button type="button" class="btn btn-default btn-block menubutton" ng-click="navigate('/authors')"><span class="glyphicon glyphicon-font"></span></button></li>
+                        <li class="col-sm-12 menuwrapper"><button type="button" class="btn btn-default btn-block menubutton" ng-click="navigate('/orders')"><span class="glyphicon glyphicon-tasks"></span></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
     <div class="col-sm-10 col-xs-12" ng-view=""></div>
-    </div>
 
 <script src="scripts/angular.js"></script>
 <script src="scripts/angular-route.js"></script>

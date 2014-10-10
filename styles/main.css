@@ -5,6 +5,27 @@
 }
 
 /*-------------------------
+    menu styling
+--------------------------*/
+
+@media (min-width: 768px) {
+    .menucontainer{
+        height: 85vh;
+    }
+
+    .menuwrapper{
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 100%;
+        height: 25%;
+    }
+
+    .menubutton{
+        height: 100%;
+    }
+}
+
+/*-------------------------
 	editor styling
 --------------------------*/
 
