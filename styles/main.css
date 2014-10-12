@@ -4,6 +4,19 @@
     text-align:center;
 }
 
+.nav-header{
+    margin-bottom: 0px ;
+    height: 15vh;
+}
+
+.nav-menu{
+    margin-bottom: 0px;
+}
+
+.nav-view{
+    margin: 0px !important;
+}
+
 /*-------------------------
     menu styling
 --------------------------*/
