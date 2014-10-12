@@ -1,5 +1,5 @@
-<div class="container-fluid">
-    <div class="panel panel-default">
+<div class="container-fluid vu-container">
+    <div class="panel panel-default nav-vu">
         <div class="panel-heading">
             <div class="row">
                 <form class="navbar-form" role="search">
@@ -15,10 +15,10 @@
         </div>
         <table class="table table-hover">
             <thead><tr>
-                <div class="col-xs-1 col-md-2"><td><strong>Id</strong></td></div>
-                <div class="col-xs-5 col-md-4"><td><strong>Book</strong></td></div>
-                <div class="col-xs-5 col-md-4"><td><strong>Author</strong></td></div>
-                <div class="col-xs-1 col-md-2"><td><strong>Price</strong></td></div>
+                <div class="col-md-2"><td><strong>Id</strong></td></div>
+                <div class="col-md-4"><td><strong>Book</strong></td></div>
+                <div class="col-md-4"><td><strong>Author</strong></td></div>
+                <div class="col-md-2"><td><strong>Price</strong></td></div>
             </tr></thead>
             <tbody><tr ng-repeat="book in books | filter:bookFilter">
                 <td>{{ book.id }}</td>

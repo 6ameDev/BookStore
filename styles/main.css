@@ -6,15 +6,19 @@
 
 .nav-header{
     margin-bottom: 0px ;
-    height: 15vh;
+    height: 14vh;
 }
 
 .nav-menu{
     margin-bottom: 0px;
 }
 
-.nav-view{
+.nav-vu{
     margin: 0px !important;
+}
+
+.vu-container{
+    padding: 0px !important;
 }
 
 /*-------------------------
