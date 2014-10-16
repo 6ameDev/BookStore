@@ -5,10 +5,10 @@ A bookstore app which demonstrates the basic implementation of a few technologie
 The app supports both desktop and mobile layouts and I'm constantly trying to improve it.
 
 So far, via this project, I have introduced myself to these:
--AngularJS
--CSS
--SASS(SCSS)
--Bootstrap
+<br />-AngularJS
+<br />-CSS
+<br />-SASS(SCSS)
+<br />-Bootstrap
 
 I'll try to improve this simple project as I keep learning more stuff.
 
