@@ -1,0 +1,102 @@
+.homestyle {
+  font: 15px/1.3 'Open Sans', sans-serif;
+  color: #5e5b64;
+  text-align: center;
+}
+
+.nav-header {
+  margin-bottom: 0px;
+  height: 14vh;
+}
+
+.nav-menu {
+  margin-bottom: 0px;
+}
+
+.nav-vu {
+  margin: 0px !important;
+}
+
+.vu-container {
+  padding: 0px !important;
+}
+
+/*-------------------------
+    menu styling
+--------------------------*/
+@media (min-width: 768px) {
+  .menucontainer {
+    height: 85vh;
+  }
+
+  .menuwrapper {
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100%;
+    height: 25%;
+  }
+
+  .menubutton {
+    height: 100%;
+  }
+}
+/*-------------------------
+	editor styling
+--------------------------*/
+.editor {
+  background-color: #5c9bb7;
+  background-image: -webkit-linear-gradient(top, #5c9bb7, #5392ad);
+  background-image: -moz-linear-gradient(top, #5c9bb7, #5392ad);
+  background-image: linear-gradient(top, #5c9bb7, #5392ad);
+  box-shadow: 0 1px 1px #ccc;
+  border-radius: 30px;
+  width: 290px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  top: 80px;
+}
+.editor:after {
+  content: '';
+  position: absolute;
+  border: 6px solid #5190ac;
+  border-color: #5190ac transparent transparent;
+  width: 0;
+  height: 0;
+  bottom: -12px;
+  left: 50%;
+  margin-left: -6px;
+}
+.editor input {
+  border: none;
+  width: 100%;
+  line-height: 34px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px #bbb inset;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  color: #8d9395;
+  font-weight: bold;
+  outline: none;
+}
+
+.para {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6d8088;
+  height: 30px;
+  cursor: default;
+}
+.para:hover {
+  font-size: 24px;
+}
+
+#main {
+  height: 100%;
+  position: relative;
+  padding-top: 150px;
+}
+
+/*# sourceMappingURL=combinedMain.css.map */
