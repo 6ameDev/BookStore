@@ -4,8 +4,6 @@ BookStore
 A bookstore app which demonstrates the basic implementation of a few technologies that I have been learning. 
 The app supports both desktop and mobile layouts and I'm constantly trying to improve it.
 
-<a href="https://rawgit.com/6ameDev/BookStore/master/index.html" target="_blank"><strong>Live Preview</strong></a>
-
 So far, via this project, I have introduced myself to these:
 <br />-AngularJS
 <br />-CSS
