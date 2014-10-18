@@ -4,7 +4,7 @@ BookStore
 A bookstore app which demonstrates the basic implementation of a few technologies that I have been learning. 
 The app supports both desktop and mobile layouts and I'm constantly trying to improve it.
 
-<a href="https://googledrive.com/host/0B4JoO6zC544kNHB1bnFOQW9ZMFk/index.html"><strong>Preview</strong></a> - Updated on 19/10/14
+<a href="https://googledrive.com/host/0B4JoO6zC544kNHB1bnFOQW9ZMFk" target="_blank"><strong>Preview</strong></a> ( Updated on 19/10/14 )
 
 So far, via this project, I have introduced myself to these:
 <br />-AngularJS
